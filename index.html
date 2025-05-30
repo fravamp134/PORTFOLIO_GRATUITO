@@ -1,0 +1,368 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Francesco Vampirelli - Portfolio Creator</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-content">
+            <div class="loading-spinner"></div>
+            <h2>FRANCESCO VAMPIRELLI</h2>
+            <p>Caricamento in corso...</p>
+        </div>
+    </div>
+
+    <!-- Work in Progress Modal -->
+    <div id="work-progress-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="progress-content">
+                <div class="hologram-spinner"></div>
+                <h2>WORK IN PROGRESS</h2>
+                <p>Questa funzionalità sarà disponibile presto!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div id="main-content" style="display: none;">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <div class="logo-animation">
+                        <span class="logo-text animated-text">FRANCESCO VAMPIRELLI</span>
+                        <div class="logo-underline"></div>
+                    </div>
+                </div>
+                <div class="nav-menu">
+                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#templates" class="nav-link">Templates</a>
+                    <a href="#services" class="nav-link">Servizi</a>
+                    <a href="#guide" class="nav-link">Guida</a>
+                </div>
+                <div class="social-nav">
+                    <a href="https://github.com/fravamp134" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/francesco.vampirelli/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@fravamp6?is_from_webapp=1&sender_device=pc" target="_blank" class="social-link">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="animated-bg">
+                    <div class="bg-animation"></div>
+                </div>
+                <div class="floating-elements">
+                    <div class="floating-icon" style="--delay: 0s; --duration: 8s;">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 2s; --duration: 10s;">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 4s; --duration: 12s;">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="floating-icon" style="--delay: 1s; --duration: 9s;">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-content">
+                <h1 class="hero-title">
+                    <span class="title-line typing-animation">Full Stack</span>
+                    <span class="title-line highlight gradient-text">Developer & Creator</span>
+                </h1>
+                <p class="hero-subtitle fade-in-up">Trasformo idee in codice, codice in magia digitale</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary pulse-btn" onclick="scrollToSection('templates')">
+                        <i class="fas fa-rocket"></i>
+                        <span>Inizia il Viaggio</span>
+                        <div class="btn-glow"></div>
+                    </button>
+                    <button class="btn btn-secondary glass-btn" onclick="scrollToSection('guide')">
+                        <i class="fas fa-magic"></i>
+                        <span>Scopri la Magia</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Social Media Showcase -->
+        <section class="social-showcase">
+            <div class="container">
+                <h2 class="section-title">Seguimi per Contenuti Esclusivi</h2>
+                <div class="social-grid">
+                    <a href="https://github.com/fravamp134" target="_blank" class="social-card github-card">
+                        <div class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>GitHub</h3>
+                        <p>Codice sorgente e progetti open source</p>
+                        <div class="social-stats">
+                            <span><i class="fas fa-star"></i> 500+ Stars</span>
+                        </div>
+                    </a>
+                    <a href="https://www.instagram.com/francesco.vampirelli/?utm_source=ig_web_button_share_sheet" target="_blank" class="social-card instagram-card">
+                        <div class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </div>
+                        <h3>Instagram</h3>
+                        <p>Behind the scenes e design inspiration</p>
+                        <div class="social-stats">
+                            <span><i class="fas fa-heart"></i> 10K+ Followers</span>
+                        </div>
+                    </a>
+                    <a href="https://www.tiktok.com/@fravamp6?is_from_webapp=1&sender_device=pc" target="_blank" class="social-card tiktok-card">
+                        <div class="social-icon">
+                            <i class="fab fa-tiktok"></i>
+                        </div>
+                        <h3>TikTok</h3>
+                        <p>Tutorial veloci e tips creativi</p>
+                        <div class="social-stats">
+                            <span><i class="fas fa-eye"></i> 100K+ Views</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Templates Section -->
+        <section id="templates" class="templates">
+            <div class="container">
+                <h2 class="section-title">Template Portfolio Premium</h2>
+                <p class="section-subtitle">Scegli il template perfetto per dominare il mercato</p>
+                
+                <div class="templates-grid">
+                    <div class="template-card advanced-card" data-template="developer">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-code"></i>
+                            <div class="icon-particles"></div>
+                        </div>
+                        <h3>Developer Elite</h3>
+                        <p>Template esclusivo per sviluppatori di alto livello</p>
+                        <div class="template-features">
+                            <span class="feature-tag">React</span>
+                            <span class="feature-tag">Animation</span>
+                            <span class="feature-tag">Responsive</span>
+                        </div>
+                        <div class="template-buttons">
+                            <button class="btn btn-template neon-btn" onclick="openTemplate('developer')">
+                                <i class="fas fa-eye"></i>
+                                <span>Preview & File</span>
+                            </button>
+                            <button class="btn btn-secondary download-all-btn" onclick="downloadCompleteTemplate('developer')">
+                                <i class="fas fa-download"></i>
+                                <span>Scarica Tutto</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="template-card advanced-card" data-template="creative">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-palette"></i>
+                            <div class="icon-particles"></div>
+                        </div>
+                        <h3>Creative Master</h3>
+                        <p>Portfolio artistico per creativi visionari</p>
+                        <div class="template-features">
+                            <span class="feature-tag">3D Effects</span>
+                            <span class="feature-tag">Gallery</span>
+                            <span class="feature-tag">Interactive</span>
+                        </div>
+                        <div class="template-buttons">
+                            <button class="btn btn-template neon-btn" onclick="openTemplate('creative')">
+                                <i class="fas fa-eye"></i>
+                                <span>Preview & File</span>
+                            </button>
+                            <button class="btn btn-secondary download-all-btn" onclick="downloadCompleteTemplate('creative')">
+                                <i class="fas fa-download"></i>
+                                <span>Scarica Tutto</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="template-card advanced-card" data-template="business">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-briefcase"></i>
+                            <div class="icon-particles"></div>
+                        </div>
+                        <h3>Business Pro</h3>
+                        <p>Eleganza professionale per executive di successo</p>
+                        <div class="template-features">
+                            <span class="feature-tag">Corporate</span>
+                            <span class="feature-tag">Analytics</span>
+                            <span class="feature-tag">CRM Ready</span>
+                        </div>
+                        <div class="template-buttons">
+                            <button class="btn btn-template neon-btn" onclick="openTemplate('business')">
+                                <i class="fas fa-eye"></i>
+                                <span>Preview & File</span>
+                            </button>
+                            <button class="btn btn-secondary download-all-btn" onclick="downloadCompleteTemplate('business')">
+                                <i class="fas fa-download"></i>
+                                <span>Scarica Tutto</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="template-card advanced-card" data-template="minimal">
+                        <div class="card-glow"></div>
+                        <div class="card-icon">
+                            <i class="fas fa-gem"></i>
+                            <div class="icon-particles"></div>
+                        </div>
+                        <h3>Minimal Luxury</h3>
+                        <p>Semplicità raffinata per ogni professione</p>
+                        <div class="template-features">
+                            <span class="feature-tag">Clean</span>
+                            <span class="feature-tag">Fast</span>
+                            <span class="feature-tag">Elegant</span>
+                        </div>
+                        <div class="template-buttons">
+                            <button class="btn btn-template neon-btn" onclick="openTemplate('minimal')">
+                                <i class="fas fa-eye"></i>
+                                <span>Preview & File</span>
+                            </button>
+                            <button class="btn btn-secondary download-all-btn" onclick="downloadCompleteTemplate('minimal')">
+                                <i class="fas fa-download"></i>
+                                <span>Scarica Tutto</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="services">
+            <div class="container">
+                <h2 class="section-title">Le Mie Competenze Elite</h2>
+                <div class="services-grid">
+                    <div class="service-card holographic-card">
+                        <div class="service-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3>Full Stack Development</h3>
+                        <p>Architetture scalabili con React, Node.js, Python e tecnologie all'avanguardia</p>
+                        <div class="skill-meter">
+                            <div class="skill-fill" style="width: 95%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="service-card holographic-card">
+                        <div class="service-icon">
+                            <i class="fas fa-cube"></i>
+                        </div>
+                        <h3>Modellazione 3D</h3>
+                        <p>Design e rendering 3D che trasformano idee in realtà visiva</p>
+                        <div class="skill-meter">
+                            <div class="skill-fill" style="width: 90%;"></div>
+                        </div>
+                    </div>
+
+                    <div class="service-card holographic-card">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Expertise IT</h3>
+                        <p>Consulenza tecnologica avanzata per il futuro digitale</p>
+                        <div class="skill-meter">
+                            <div class="skill-fill" style="width: 98%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide">
+            <div class="container">
+                <h2 class="section-title">Inizia la Tua Trasformazione</h2>
+                <div class="guide-grid">
+                    <div class="guide-card cyberpunk-card">
+                        <div class="guide-icon">
+                            <i class="fas fa-file-pdf"></i>
+                        </div>
+                        <h3>Guida PDF Completa</h3>
+                        <p>Manuale strategico per dominare il mercato</p>
+                        <button class="btn btn-guide" onclick="showWorkInProgress()">
+                            <i class="fas fa-download"></i>
+                            Scarica Strategia
+                        </button>
+                    </div>
+
+                    <div class="guide-card cyberpunk-card">
+                        <div class="guide-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <h3>Repository GitHub</h3>
+                        <p>Codice esclusivo e aggiornamenti continui</p>
+                        <button class="btn btn-guide" onclick="showWorkInProgress()">
+                            <i class="fas fa-external-link-alt"></i>
+                            Accedi al Codice
+                        </button>
+                    </div>
+
+                    <div class="guide-card cyberpunk-card">
+                        <div class="guide-icon">
+                            <i class="fab fa-discord"></i>
+                        </div>
+                        <h3>Community VIP</h3>
+                        <p>Network esclusivo di professionisti</p>
+                        <button class="btn btn-guide" onclick="showWorkInProgress()">
+                            <i class="fas fa-crown"></i>
+                            Entra nel VIP
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-logo">
+                        <span class="logo-text">FRANCESCO <span class="accent">VAMPIRELLI</span></span>
+                    </div>
+                    <div class="footer-social">
+                        <a href="https://github.com/fravamp134" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/francesco.vampirelli/?utm_source=ig_web_button_share_sheet" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@fravamp6?is_from_webapp=1&sender_device=pc" target="_blank"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                    <p>&copy; 2024 Francesco Vampirelli. Creatore di Futuri Digitali.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Template Page Modal -->
+    <div id="template-page-modal" class="modal template-page">
+        <div class="modal-content template-page-content">
+            <span class="close template-close">&times;</span>
+            <div id="template-page-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
